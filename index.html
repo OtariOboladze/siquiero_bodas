@@ -9,7 +9,9 @@
 
 	<body>
 		<div class="container">
+			<!–– CONTAINS EVERYTHING BUT FOOTER ––>
 			<header>
+				<!–– CONTAINS HEADER, LOGOS, MENUS AND BUTTONS ––>
 				<img id="logoIslas" src="images/Logo Islas canarias copia.png" alt="" />
 
 				<div class="dropdown">
@@ -17,8 +19,8 @@
 					<div class="dropdown-content">
 						<a href="https://www.google.co.uk">English</a>
 						<a href="https://www.google.fr">French</a>
-                  <a href="https://www.google.de">German</a>
-                  <a href="https://www.google.ru">Russian</a>
+						<a href="https://www.google.de">German</a>
+						<a href="https://www.google.ru">Russian</a>
 					</div>
 				</div>
 
@@ -35,8 +37,12 @@
 				</div>
 
 				<div class="logos">
-					<img src="images/siquiero.png" alt="" />
-					<img src="images/headerdecoration.png" alt="" />
+					<img class="logoImg" src="images/siquiero.png" alt="" />
+					<img
+						class="logoImgUnderline"
+						src="images/headerdecoration.png"
+						alt=""
+					/>
 					<div class="headerDiv">
 						<div class="menu">
 							<ul id="menu">
@@ -45,67 +51,75 @@
 								<li>DESCUBRIR</li>
 							</ul>
 						</div>
-						<div class="professionals">
-							<button>SMB</button>
+						<div class="mediaBtn">
+							<img src="images/Compartir.png" alt="" />
 						</div>
-						<div class="professionals">
-							<button>blablablabla</button>
+						<div>
+							<button class="professionals">Acceso Profesionales</button>
 						</div>
 					</div>
 				</div>
 			</header>
 
-			<div class="w3-content w3-display-container">
-				<img class="mySlides" src="images/Img 01.png" style="width: 100%;" />
-				<img class="mySlides" src="images/Img 02.png" style="width: 100%;" />
-				<img class="mySlides" src="images/Img 03.png" style="width: 100%;" />
-				<img class="mySlides" src="images/Img 04.png" style="width: 100%;" />
+			<nav>
+				<!–– CONTAINS SLIDESHOW ELEMENTS ––>
+				<img class="mySlides" src="images/Img 01.png" />
+				<img class="mySlides" src="images/Img 02.png" />
+				<img class="mySlides" src="images/Img 03.png" />
+				<img class="mySlides" src="images/Img 04.png" />
 
-				<button
-					class="w3-button w3-black w3-display-left"
-					onclick="plusDivs(-1)"
-				>
+				<button onclick="plusDivs(-1)">
 					&#10096;
 				</button>
-				<button
-					class="w3-button w3-black w3-display-right"
-					onclick="plusDivs(1)"
-				>
+				<button onclick="plusDivs(1)">
 					&#10095;
 				</button>
-			</div>
+			</nav>
 
 			<main>
-				<div class="one">
-					<img src="images/Enlace1.png" alt="" />
-					<p>sdfasdofuasdf iuadfiu</p>
+				<!–– CONTAINS FOUR PICTURE/TEXT ELEMENTS ––>
+				<div class="first-two-elements">
+					<!–– CONTAINS FIRST TWO PICTURE/TEXT ELEMENTS ––>
+					<div class="one">
+						<img src="images/Enlace1.png" alt="" />
+						<div class="text-block-one">
+							<h3>La Boda En La Playa</h3>
+							<p>OLIVER Y JOHANNA</p>
+						</div>
+					</div>
+
+					<div class="two">
+						<img src="images/Sugerencias2.png" alt="" />
+						<div class="text-block-two">
+							<p>LAS MEJORES <span>PUESTAS DEL SOL</span></p>
+						</div>
+					</div>
 				</div>
 
-				<div class="two">
-					<img src="images/Sugerencias2.png" alt="" />
-					<p>sdfasdofuasdf iuadfiu</p>
-				</div>
+				<div class="last-four-elements">
+					<!–– CONTAINS REST FOUR PICTURE/TEXT ELEMENTS ––>
+					<div class="three">
+						<div class="three-one">
+							<img src="images/Mensaje Arena3.png" />
+						</div>
+						<div class="three-two">
+							<img src="images/Luna de Miel4.png" alt="" />
+						</div>
+					</div>
 
-				<div class="three">
-					<div>
-						<img src="images/Luna de Miel3.png" />
-					</div>
-					<div>
-						<img src="images/ANIVERSARIO4.png" alt="" />
-					</div>
-				</div>
-
-				<div class="four">
-					<div>
-						<img src="images/Consulta5.png" alt="" />
-					</div>
-					<div>
-						<img src="images/Tiempo6.png" />
+					<div class="four">
+						<div class="four-one">
+							<img src="images/Consulta5.png" alt="" />
+						</div>
+						<div class="four-two">
+							<img src="images/Tiempo6.png" />
+						</div>
 					</div>
 				</div>
 			</main>
 		</div>
 		<footer>
+			<!–– FOOTER IS OUTSIDE OF "CONTAINER" ––>
 			<img src="images/Footer.png" alt="" id="footerImg" />
 		</footer>
 	</body>
