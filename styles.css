@@ -1,20 +1,24 @@
-* {
+/* * {
 	border: 0.1px solid red;
-}
+} */
 
-/**************global*************/
+/*______________________GLOBAL______________________*/
 
 html {
 	background: url(images/Fondo.png) no-repeat center center fixed;
 }
 
 body {
+	margin: 0;
+}
+
+.container {
 	width: 60%;
 	margin: 0 auto;
 	min-width: 700px;
 }
 
-/**************header*************/
+/*______________________HEADER______________________*/
 
 header {
 	color: whitesmoke;
@@ -35,6 +39,44 @@ header {
 	display: block;
 }
 
+.container {
+	position: relative;
+}
+
+#logoIslas {
+	position: absolute;
+	right: 80px;
+	top: -5px;
+	height: 60px;
+}
+
+.dropdown{
+   position: absolute;
+	right: 0px;
+	top: -5px;
+
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #fcefef;
+}
+
+.dropdown-content a {
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
 #menu {
 	list-style-type: none;
 	padding: 0;
@@ -46,6 +88,7 @@ header {
 
 #islas {
 	padding: 0;
+	margin: 5px;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	font-size: x-small;
 }
@@ -79,3 +122,7 @@ main .two p {
 }
 
 /*______________________FOOTER______________________*/
+
+#footerImg {
+	width: 100%;
+}
