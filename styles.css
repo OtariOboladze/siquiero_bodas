@@ -3,27 +3,23 @@ SECTIONS:
    GBLOBAL - general css styles
    HEADER - contains logo's, buttons, menus in the header
    NAVBAR - slideshow
-   MAIN - contains four picture/text elements
-   FOOTER - footer info
+   MAIN - contains four picture/text units
+   FOOTER - footer
 
 
 
    #e498a7 rose color for text on pictures in main
+   #f6b035 yellowish descargaGTatisText color
 */
-
-/* * {
-	border: 0.1px solid red;
-} */
 
 /*______________________GLOBAL______________________*/
 
-/*using for text on pictures in main*/
+/*three fonts for text on pictures in main*/
 @font-face {
 	font-family: Trajan;
 	src: url(fonts/TrajanProRegular.ttf);
 }
 
-/*using for text on pictures in main*/
 @font-face {
 	font-family: Trashhand;
 	src: url(fonts/TrashHand.ttf);
@@ -36,6 +32,7 @@ SECTIONS:
 
 html {
 	background: url(images/Fondo.png) no-repeat center center fixed;
+	background-size: 120%; /*120% works better on screens wider than 1920px*/
 }
 
 body {
@@ -43,7 +40,7 @@ body {
 }
 
 .container {
-	/*main container centerd and not shrinkable less than 700px*/
+	/*main container centerd and not shrinkable with less than 700px*/
 	width: 60%;
 	margin: 0 auto;
 	min-width: 700px;
@@ -55,41 +52,39 @@ header {
 	color: whitesmoke;
 }
 
-.siquiero {
-	height: auto;
-	padding: 0;
-}
-
 /*to displey menu, social media buttons and professionals button on one line*/
 .headerDiv {
 	display: flex;
 	justify-content: space-between;
 }
 
+/*contains everything but footer*/
 .container {
 	position: relative;
 }
 
-.logos img {
-	width: 55%;
-   display: block;
-   margin-bottom: 5px;
-}
-
+/*logo above underlie ornament*/
 .logoImg {
-   margin-top: 20px;
-   margin-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
+/*underlie ornament*/
 .logos .logoImgUnderline {
 	margin-bottom: 20px;
+}
+
+/*name and underling ornament styles*/
+.logos img {
+	width: 55%;
+	display: block;
 }
 
 /*social media buttons*/
 .mediaBtn img {
 	height: 100%;
-   width: 100%;
-   margin-bottom: 0;
+	width: 100%;
+	margin-bottom: 0;
 }
 
 /*professionals button*/
@@ -109,6 +104,7 @@ header {
 	position: absolute;
 	right: 0px;
 	top: -5px;
+	z-index: 1;
 }
 
 .dropdown-content {
@@ -140,18 +136,17 @@ header {
 	height: 60px;
 }
 
-/*island styles*/
+/*island names styles*/
 #islas {
 	padding: 0;
 	margin: 0;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/*to separate island names*/
+/*island names separation, dot separator is defined in the HTML*/
 #islas li {
 	display: inline;
 	font-size: x-small;
-	padding: 0 5px;
 }
 
 /*menu under logo styles*/
@@ -174,23 +169,37 @@ header {
 
 /*______________________NAVBAR______________________*/
 
+/*pictures are used with preapplied background styles and moved left and scaled to align with other items*/
+
+/*slider general styles*/
 nav {
-   margin: 10px 0;
+	margin: 10px 0;
+	position: relative;
+	left: -4%;
 }
 
-.btn1{
-   position: relative;
-   left: 45%;
+/*left button on the slide*/
+.btn1 {
+	position: absolute;
+	left: 4%;
+	top: 40%;
+	background: url(images/Cursor1.png) no-repeat;
+	padding: 40px 20px;
 }
 
-.btn2{
-   position: relative;
-   left: 55%;
+/*right button on the slide*/
+.btn2 {
+	position: absolute;
+	right: -4%;
+	top: 40%;
+	background: url(images/Cursor2.png) no-repeat;
+	padding: 40px 20px;
 }
 
+/*width is increased to verticaly martch other items*/
 .mySlides {
 	display: none;
-	width: 100%;
+	width: 108%;
 }
 
 /*______________________MAIN______________________*/
@@ -199,27 +208,32 @@ main {
 	margin-bottom: 20px;
 }
 
-/*FIRST TWO ELEMENTS*/
+/*FIRST TWO UNITS*/
 
 .first-two-elements {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 
 .first-two-elements img {
 	width: 100%;
 }
 
+/*first unit (1) top left*/
 .one {
 	margin: 0 10px 10px 0;
 	position: relative;
+	width: 50%;
 }
 
+/*second unit (2) top right*/
 .two {
 	margin: 0 0 10px 10px;
 	position: relative;
+	width: 50%;
 }
 
+/*above text block on 1*/
 .text-block-one {
 	position: absolute;
 	bottom: 15px;
@@ -228,6 +242,7 @@ main {
 	font-size: 1.5vw;
 }
 
+/*below text block on 1*/
 .text-block-two {
 	position: absolute;
 	bottom: 25px;
@@ -236,91 +251,95 @@ main {
 	font-size: 2vw;
 }
 
+/*below text on 1 style*/
 span {
 	color: #e498a7;
 }
-/*text on images styles end*/
 
-/*if viewport is less than 1000px, text on picture 1 will remain 15px*/
+/*RESPONSIVNESS MIN FONT SIZE*/
+/*if viewport is less than 1000px, text on 1 will remain 15px, text on 2 20px*/
 @media screen and (max-width: 1000px) {
 	.text-block-one {
 		font-size: 15px;
 	}
-}
-
-/*if viewport is less than 1000px, text on picture 2 will remain 20px*/
-@media screen and (max-width: 1000px) {
 	.text-block-two {
 		font-size: 20px;
 	}
 }
 
-/*if the viewport is more than 1550, text on picture 1 remains 25px*/
+/*RESPONSIVNESS MAX FONT SIZE*/
+/*if the viewport is more than 1550, text on 1 remains 25px, text on 2 31 px*/
 @media screen and (min-width: 1550px) {
 	.text-block-one {
 		font-size: 25px;
 	}
-}
-
-/*if the viewport is more than 1550, text on picture 2 remains 31px*/
-@media screen and (min-width: 1550px) {
 	.text-block-two {
 		font-size: 31px;
 	}
 }
 
-/*text on picture styles*/
+/*h3 text on 1 styles*/
 .text-block-one h3 {
 	margin: 5px 0px;
 	font-family: Trajan;
 	font-weight: lighter;
 }
 
+/*p text on 1 styles*/
 .text-block-one p {
 	font-family: Trashhand;
 	margin: 0;
 	color: #e498a7;
 }
 
+/*p text on 2 styles*/
 .text-block-two p {
 	font-family: Trashhand;
 	margin: 0;
 }
 
-/*LAST FOUR ELEMENTS*/
+/*LAST FOUR UNITS*/
 
 .last-four-elements {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 
+/*third unit (3) left below*/
 .three {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	margin: 10px 10px 0 0;
+	width: 50%;
 }
-
+/*fourth unit (4) right below*/
 .four {
 	display: flex;
 	margin: 10px 0 0 10px;
+	width: 50%;
 }
 
+/*3 and 4 img's*/
 .last-four-elements img {
 	width: 100%;
 }
 
+/*3.1 picture styles*/
 .three-one {
-   margin-right: 10px;
-   position: relative;
+	margin-right: 10px;
+	position: relative;
 	text-align: left;
 }
 
+/*to center text on 3.2 picture */
 .three-two {
 	position: relative;
 	text-align: center;
+	height: 100%;
 }
 
-.three-one p{
+/*p text on picture 3.1 styles*/
+.three-one p {
 	position: absolute;
 	bottom: -30px;
 	left: 40%;
@@ -330,6 +349,7 @@ span {
 	color: rgb(255, 8, 8);
 }
 
+/*p text on picture 3.2 styles*/
 .three-two p {
 	position: absolute;
 	top: 38%;
@@ -340,12 +360,31 @@ span {
 	color: whitesmoke;
 }
 
+/*4.1*/
+.four-one {
+	position: relative;
+	text-align: left;
+}
+
+/*space between 3rd and 4th picture-units*/
 .four-two {
 	margin-left: 10px;
 }
 
+/*4.1 text*/
+.four-one p {
+	position: absolute;
+	top: 73%;
+	left: 45%;
+	transform: translate(-50%, -50%);
+	font-family: BebasNeue;
+	font-size: x-large;
+	color: #f6b035;
+}
+
 /*______________________FOOTER______________________*/
 
+/*footer image style*/
 #footerImg {
 	width: 100%;
 }
