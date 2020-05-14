@@ -39,11 +39,12 @@ body {
 	margin: 0;
 }
 
+/*main container centerd and not shrinkable less than 700px*/
 .container {
-	/*main container centerd and not shrinkable with less than 700px*/
 	width: 60%;
 	margin: 0 auto;
 	min-width: 700px;
+	position: relative;
 }
 
 /*______________________HEADER______________________*/
@@ -53,42 +54,37 @@ header {
 }
 
 /*to displey menu, social media buttons and professionals button on one line*/
-.headerDiv {
+.logos div:first-of-type {
 	display: flex;
 	justify-content: space-between;
 }
 
-/*contains everything but footer*/
-.container {
-	position: relative;
-}
-
 /*logo above underlie ornament*/
-.logoImg {
+.logos img:nth-of-type(1) {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
 
 /*underlie ornament*/
-.logos .logoImgUnderline {
+.logos img:nth-of-type(2) {
 	margin-bottom: 20px;
 }
 
-/*name and underling ornament styles*/
+/*logo and underlie ornament styles*/
 .logos img {
 	width: 55%;
 	display: block;
 }
 
 /*social media buttons*/
-.mediaBtn img {
+#mediaBtn {
 	height: 100%;
 	width: 100%;
-	margin-bottom: 0;
+	margin: 0;
 }
 
 /*professionals button*/
-.professionals {
+.logos button {
 	background-color: #e2e1e9;
 	border: none;
 	color: rgb(2, 2, 2);
@@ -105,31 +101,32 @@ header {
 	right: 0px;
 	top: -5px;
 	z-index: 1;
+	padding-top: 2px;
 }
 
-.dropdown-content {
+.dropdown-languages {
 	display: none;
 	position: absolute;
 	background-color: #fcefef;
 }
 
-.dropdown-content a {
+.dropdown-languages a {
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown-languages a:hover {
 	background-color: #f1f1f1;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-languages {
 	display: block;
 }
 /*languages button styles end*/
 
 /*oblique banner*/
-#logoIslas {
+header > img {
 	position: absolute;
 	right: 80px;
 	top: -5px;
@@ -137,20 +134,20 @@ header {
 }
 
 /*island names styles*/
-#islas {
+header div:nth-of-type(2) ul {
 	padding: 0;
 	margin: 0;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /*island names separation, dot separator is defined in the HTML*/
-#islas li {
+header div:nth-of-type(2) li {
 	display: inline;
 	font-size: x-small;
 }
 
 /*menu under logo styles*/
-#menu {
+.logos ul {
 	list-style-type: none;
 	padding: 2px;
 	margin: 0;
@@ -162,9 +159,11 @@ header {
 }
 
 /*menu under logo separation*/
-#menu li {
+.logos ul li {
 	padding: 3px 5px;
 	font-size: small;
+	font-size: 1vw;
+	padding: 0 10px;
 }
 
 /*______________________NAVBAR______________________*/
@@ -179,7 +178,7 @@ nav {
 }
 
 /*left button on the slide*/
-.btn1 {
+#btn1 {
 	position: absolute;
 	left: 4%;
 	top: 40%;
@@ -188,7 +187,7 @@ nav {
 }
 
 /*right button on the slide*/
-.btn2 {
+#btn2 {
 	position: absolute;
 	right: -4%;
 	top: 40%;
@@ -264,6 +263,13 @@ span {
 	}
 	.text-block-two {
 		font-size: 20px;
+	}
+}
+
+/*if viewport is less than 1200px, menu text under logo/ornament remains 12px*/
+@media screen and (max-width: 1200px) {
+	#menu li {
+		font-size: 12px;
 	}
 }
 
