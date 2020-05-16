@@ -9,7 +9,7 @@ SECTIONS:
 
 
    #e498a7 rose color for text on pictures in main
-   #f6b035 yellowish descargaGTatisText color
+   #f6b035 yellowish descargaGratisText color
 */
 
 /*______________________GLOBAL______________________*/
@@ -231,8 +231,8 @@ main {
 
 .top-left-banner-text {
 	position: absolute;
-	bottom: 15px;
-	right: 30px;
+	bottom: 5%;
+	right: 10%;
 	padding: 0 20px;
 	font-size: 1.5vw;
 }
@@ -267,8 +267,15 @@ span {
 	color: #e498a7;
 }
 
+/*if viewport is less than 1200px, menu text under logo/ornament remains 12px*/
+@media screen and (max-width: 1200px) {
+	#menu li {
+		font-size: 12px;
+	}
+}
+
 /*RESPONSIVNESS MIN FONT SIZE*/
-/*if viewport is less than 1000px, text on 1 will remain 15px, text on 2 20px*/
+/*if viewport is less than 1000px, top-left-banner text will remain 15px, top-right-banner-text on 2 20px*/
 @media screen and (max-width: 1000px) {
 	.top-left-banner-text {
 		font-size: 15px;
@@ -278,15 +285,8 @@ span {
 	}
 }
 
-/*if viewport is less than 1200px, menu text under logo/ornament remains 12px*/
-@media screen and (max-width: 1200px) {
-	#menu li {
-		font-size: 12px;
-	}
-}
-
 /*RESPONSIVNESS MAX FONT SIZE*/
-/*if the viewport is more than 1550, text on 1 remains 25px, text on 2 31 px*/
+/*if the viewport is more than 1550, top-left-banner-text remains 25px, top-right-banner-text 31 px*/
 @media screen and (min-width: 1550px) {
 	.top-left-banner-text {
 		font-size: 25px;
