@@ -5,11 +5,6 @@ SECTIONS:
    NAVBAR - slideshow
    MAIN - contains four picture/text units
    FOOTER - footer
-
-
-
-   #e498a7 rose color for text on pictures in main
-   #f6b035 yellowish descargaGratisText color
 */
 
 /*______________________GLOBAL______________________*/
@@ -167,7 +162,7 @@ header div:nth-of-type(2) li {
 
 /*______________________NAVBAR______________________*/
 
-/*pictures are used with preapplied background styles and moved left and scaled to align with other items*/
+/*pictures are used with preapplied background ornaments and moved and scaled to align with other items*/
 
 /*slider general styles*/
 nav {
@@ -192,7 +187,7 @@ nav {
 	padding: 40px 20px;
 }
 
-/*width is increased horizontally to martch other items*/
+/*width is increased horizontally to match other items*/
 .mySlides {
 	display: none;
 	width: 108%;
@@ -296,7 +291,7 @@ span {
 	display: flex;
 	justify-content: flex-end;
 	margin: 10px 10px 0 0;
-	width: 50%;
+   width: 50%;
 }
 
 .bottom-third-and-fourth-banners {
