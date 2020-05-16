@@ -231,8 +231,8 @@ main {
 
 .top-left-banner-text {
 	position: absolute;
-	bottom: 15px;
-	right: 30px;
+	bottom: 5%;
+	right: 5%;
 	padding: 0 20px;
 	font-size: 1.5vw;
 }
@@ -251,8 +251,8 @@ main {
 
 .top-right-banner-text {
 	position: absolute;
-	bottom: 25px;
-	right: 30px;
+	bottom: 8%;
+	right: 5%;
 	padding: 0 20px;
 	font-size: 2vw;
 }
@@ -267,32 +267,17 @@ span {
 	color: #e498a7;
 }
 
-/*if viewport is less than 1200px, menu text under logo/ornament remains 12px*/
+/*TEXT RESPONSIVNESS*/
+/*if viewport is less than 1200px, top-left-banner text will remain 18px, top-right-banner-text 24px,menu text under logo/ornament remains 12px*/
 @media screen and (max-width: 1200px) {
+	.top-left-banner-text {
+		font-size: 18px;
+	}
+	.top-right-banner-text {
+		font-size: 24px;
+	}
 	#menu li {
 		font-size: 12px;
-	}
-}
-
-/*RESPONSIVNESS MIN FONT SIZE*/
-/*if viewport is less than 1000px, top-left-banner text will remain 15px, top-right-banner-text on 2 20px*/
-@media screen and (max-width: 1000px) {
-	.top-left-banner-text {
-		font-size: 15px;
-	}
-	.top-right-banner-text {
-		font-size: 20px;
-	}
-}
-
-/*RESPONSIVNESS MAX FONT SIZE*/
-/*if the viewport is more than 1550, top-left-banner-text remains 25px, top-right-banner-text 31 px*/
-@media screen and (min-width: 1550px) {
-	.top-left-banner-text {
-		font-size: 25px;
-	}
-	.top-right-banner-text {
-		font-size: 31px;
 	}
 }
 
