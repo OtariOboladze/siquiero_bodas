@@ -231,8 +231,8 @@ main {
 
 .top-left-banner-text {
 	position: absolute;
-	bottom: 5%;
-	right: 10%;
+	bottom: 15px;
+	right: 30px;
 	padding: 0 20px;
 	font-size: 1.5vw;
 }
