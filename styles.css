@@ -14,7 +14,6 @@ SECTIONS:
 
 /*______________________GLOBAL______________________*/
 
-/*three fonts for text on pictures in main*/
 @font-face {
 	font-family: Trajan;
 	src: url(fonts/TrajanProRegular.ttf);
@@ -32,7 +31,7 @@ SECTIONS:
 
 html {
 	background: url(images/Fondo.png) no-repeat center center fixed;
-	background-size: 120%; /*120% works better on screens wider than 1920px*/
+	background-size: 120%; /*120% looks better on screens wider than 1920px*/
 }
 
 body {
@@ -53,24 +52,24 @@ header {
 	color: whitesmoke;
 }
 
-/*to displey menu, social media buttons and professionals button on one line*/
+/*menu, social media buttons and professionals button on one line*/
 .logos div:first-of-type {
 	display: flex;
 	justify-content: space-between;
 }
 
-/*logo above underlie ornament*/
+/*logo with website name*/
 .logos img:nth-of-type(1) {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
 
-/*underlie ornament*/
+/*logo underlay ornament*/
 .logos img:nth-of-type(2) {
 	margin-bottom: 20px;
 }
 
-/*logo and underlie ornament styles*/
+/*logo and underlay ornament styles*/
 .logos img {
 	width: 55%;
 	display: block;
@@ -107,7 +106,7 @@ header {
 .dropdown-languages {
 	display: none;
 	position: absolute;
-	background-color: #fcefef;
+	background-color: #f3f3f3;
 }
 
 .dropdown-languages a {
@@ -117,7 +116,7 @@ header {
 }
 
 .dropdown-languages a:hover {
-	background-color: #f1f1f1;
+	background-color: #cfcfcf;
 }
 
 .dropdown:hover .dropdown-languages {
@@ -177,8 +176,7 @@ nav {
 	left: -4%;
 }
 
-/*left button on the slide*/
-#btn1 {
+#slider-left-button {
 	position: absolute;
 	left: 4%;
 	top: 40%;
@@ -186,8 +184,7 @@ nav {
 	padding: 40px 20px;
 }
 
-/*right button on the slide*/
-#btn2 {
+#slider-right-button {
 	position: absolute;
 	right: -4%;
 	top: 40%;
@@ -195,7 +192,7 @@ nav {
 	padding: 40px 20px;
 }
 
-/*width is increased to verticaly martch other items*/
+/*width is increased horizontally to martch other items*/
 .mySlides {
 	display: none;
 	width: 108%;
@@ -207,33 +204,32 @@ main {
 	margin-bottom: 20px;
 }
 
-/*FIRST TWO UNITS*/
+/*TOP TWO BANNERS*/
 
-.first-two-elements {
+.top-two-banners {
 	display: flex;
 	justify-content: space-between;
 }
 
-.first-two-elements img {
+.top-two-banners img {
 	width: 100%;
 }
 
-/*first unit (1) top left*/
-.one {
+.top-left-banner,
+.top-right-banner {
+	position: relative;
+	width: 50%;
+}
+
+.top-left-banner {
 	margin: 0 10px 10px 0;
-	position: relative;
-	width: 50%;
 }
 
-/*second unit (2) top right*/
-.two {
+.top-right-banner {
 	margin: 0 0 10px 10px;
-	position: relative;
-	width: 50%;
 }
 
-/*above text block on 1*/
-.text-block-one {
+.top-left-banner-text {
 	position: absolute;
 	bottom: 15px;
 	right: 30px;
@@ -241,8 +237,19 @@ main {
 	font-size: 1.5vw;
 }
 
-/*below text block on 1*/
-.text-block-two {
+.top-left-banner-text h3 {
+	margin: 5px 0px;
+	font-family: Trajan;
+	font-weight: lighter;
+}
+
+.top-left-banner-text p {
+	font-family: Trashhand;
+	margin: 0;
+	color: #e498a7;
+}
+
+.top-right-banner-text {
 	position: absolute;
 	bottom: 25px;
 	right: 30px;
@@ -250,7 +257,12 @@ main {
 	font-size: 2vw;
 }
 
-/*below text on 1 style*/
+.top-right-banner-text p {
+	font-family: Trashhand;
+	margin: 0;
+}
+
+/*top-right-banner-text part is colord*/
 span {
 	color: #e498a7;
 }
@@ -258,10 +270,10 @@ span {
 /*RESPONSIVNESS MIN FONT SIZE*/
 /*if viewport is less than 1000px, text on 1 will remain 15px, text on 2 20px*/
 @media screen and (max-width: 1000px) {
-	.text-block-one {
+	.top-left-banner-text {
 		font-size: 15px;
 	}
-	.text-block-two {
+	.top-right-banner-text {
 		font-size: 20px;
 	}
 }
@@ -276,76 +288,45 @@ span {
 /*RESPONSIVNESS MAX FONT SIZE*/
 /*if the viewport is more than 1550, text on 1 remains 25px, text on 2 31 px*/
 @media screen and (min-width: 1550px) {
-	.text-block-one {
+	.top-left-banner-text {
 		font-size: 25px;
 	}
-	.text-block-two {
+	.top-right-banner-text {
 		font-size: 31px;
 	}
 }
 
-/*h3 text on 1 styles*/
-.text-block-one h3 {
-	margin: 5px 0px;
-	font-family: Trajan;
-	font-weight: lighter;
-}
+/*BOTTOM FOUR BANNERS*/
 
-/*p text on 1 styles*/
-.text-block-one p {
-	font-family: Trashhand;
-	margin: 0;
-	color: #e498a7;
-}
-
-/*p text on 2 styles*/
-.text-block-two p {
-	font-family: Trashhand;
-	margin: 0;
-}
-
-/*LAST FOUR UNITS*/
-
-.last-four-elements {
+.bottom-four-banners {
 	display: flex;
 	justify-content: space-between;
 }
 
-/*third unit (3) left below*/
-.three {
+.bottom-four-banners img {
+	width: 100%;
+}
+
+.bottom-first-and-second-banners {
 	display: flex;
 	justify-content: flex-end;
 	margin: 10px 10px 0 0;
 	width: 50%;
 }
-/*fourth unit (4) right below*/
-.four {
+
+.bottom-third-and-fourth-banners {
 	display: flex;
 	margin: 10px 0 0 10px;
 	width: 50%;
 }
 
-/*3 and 4 img's*/
-.last-four-elements img {
-	width: 100%;
-}
-
-/*3.1 picture styles*/
-.three-one {
+.bottom-first-banner {
 	margin-right: 10px;
 	position: relative;
 	text-align: left;
 }
 
-/*to center text on 3.2 picture */
-.three-two {
-	position: relative;
-	text-align: center;
-	height: 100%;
-}
-
-/*p text on picture 3.1 styles*/
-.three-one p {
+.bottom-first-banner p {
 	position: absolute;
 	bottom: -30px;
 	left: 40%;
@@ -355,8 +336,13 @@ span {
 	color: rgb(255, 8, 8);
 }
 
-/*p text on picture 3.2 styles*/
-.three-two p {
+.bottom-second-banner {
+	position: relative;
+	text-align: center;
+	height: 100%;
+}
+
+.bottom-second-banner p {
 	position: absolute;
 	top: 38%;
 	left: 50%;
@@ -366,19 +352,12 @@ span {
 	color: whitesmoke;
 }
 
-/*4.1*/
-.four-one {
+.bottom-third-banner {
 	position: relative;
 	text-align: left;
 }
 
-/*space between 3rd and 4th picture-units*/
-.four-two {
-	margin-left: 10px;
-}
-
-/*4.1 text*/
-.four-one p {
+.bottom-third-banner p {
 	position: absolute;
 	top: 73%;
 	left: 45%;
@@ -388,9 +367,12 @@ span {
 	color: #f6b035;
 }
 
+.bottom-fourth-banner {
+	margin-left: 10px;
+}
+
 /*______________________FOOTER______________________*/
 
-/*footer image style*/
 #footerImg {
 	width: 100%;
 }
