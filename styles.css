@@ -3,7 +3,7 @@ SECTIONS:
    GBLOBAL - general css styles
    HEADER - contains logo's, buttons, menus in the header
    NAVBAR - slideshow
-   MAIN - contains four picture/text units
+   MAIN - contains six banners
    FOOTER - footer
 */
 
@@ -24,140 +24,114 @@ SECTIONS:
 	src: url(fonts/BebasNeue-Regular.ttf);
 }
 
+@font-face {
+	font-family: Gotham;
+	src: url(fonts/GothamRounded.ttf);
+}
+
 html {
 	background: url(images/Fondo.png) no-repeat center center fixed;
 	background-size: 120%; /*120% looks better on screens wider than 1920px*/
+}
+
+/*fixing background picture for less than 900ps screens*/
+@media screen and (max-width: 900px) {
+	html {
+		background-size: 1100px;
+	}
 }
 
 body {
 	margin: 0;
 }
 
-/*main container centerd and not shrinkable less than 700px*/
 .container {
 	width: 60%;
 	margin: 0 auto;
-	min-width: 700px;
 	position: relative;
 }
 
 /*______________________HEADER______________________*/
 
-header {
-	color: whitesmoke;
-}
-
-/*menu, social media buttons and professionals button on one line*/
-.logos div:first-of-type {
+.islandNames-obliqueBanner-Languages {
 	display: flex;
 	justify-content: space-between;
+	overflow: visible;
 }
 
-/*logo with website name*/
-.logos img:nth-of-type(1) {
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-/*logo underlay ornament*/
-.logos img:nth-of-type(2) {
-	margin-bottom: 20px;
-}
-
-/*logo and underlay ornament styles*/
-.logos img {
-	width: 55%;
-	display: block;
-}
-
-/*social media buttons*/
-#mediaBtn {
-	height: 100%;
-	width: 100%;
+.islandNames-obliqueBanner-Languages ul {
 	margin: 0;
-}
-
-/*professionals button*/
-.logos button {
-	background-color: #e2e1e9;
-	border: none;
-	color: rgb(2, 2, 2);
-	padding: 6px 40px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 12px;
-}
-
-/*languages button styles start*/
-.dropdown {
-	position: absolute;
-	right: 0px;
-	top: -5px;
-	z-index: 1;
-	padding-top: 2px;
-}
-
-.dropdown-languages {
-	display: none;
-	position: absolute;
-	background-color: #f3f3f3;
-}
-
-.dropdown-languages a {
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.dropdown-languages a:hover {
-	background-color: #cfcfcf;
-}
-
-.dropdown:hover .dropdown-languages {
-	display: block;
-}
-/*languages button styles end*/
-
-/*oblique banner*/
-header > img {
-	position: absolute;
-	right: 80px;
-	top: -5px;
-	height: 60px;
-}
-
-/*island names styles*/
-header div:nth-of-type(2) ul {
 	padding: 0;
-	margin: 0;
-	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-family: Gotham;
 }
 
-/*island names separation, dot separator is defined in the HTML*/
-header div:nth-of-type(2) li {
+.islandNames-obliqueBanner-Languages ul li {
 	display: inline;
-	font-size: x-small;
+	font-size: 0.7vw;
+	color: white;
+	font-weight: lighter;
 }
 
-/*menu under logo styles*/
-.logos ul {
-	list-style-type: none;
-	padding: 2px;
-	margin: 0;
+.obliqueBanner {
+	height: 0;
+}
+
+.obliqueBanner img {
+	width: 14.2vw;
+}
+
+.LanguagesBtn {
+   width: 5vw;
+   padding: 0;
+	font-size: 0.9vw;
+}
+
+.websiteNameLogo,
+.websiteNameLogoOrnament {
+	width: 31.8vw;
+	color: white;
+}
+
+.websiteNameLogo {
+	padding-top: 1.8vw;
+}
+
+.websiteNameLogoOrnament {
+	padding-bottom: 1vw;
+}
+
+.Menu-SocialMedia-ProfessionalsBtn {
 	display: flex;
-	justify-content: center;
-	border-width: 2px 0;
-	border-top: 1px solid whitesmoke;
-	border-bottom: 1px solid whitesmoke;
+	justify-content: space-between;
+	height: 1.5vw;
 }
 
-/*menu under logo separation*/
-.logos ul li {
-	padding: 3px 5px;
-	font-size: small;
-	font-size: 1vw;
-	padding: 0 10px;
+.menu {
+	margin: 0;
+	padding: 0;
+	color: white;
+	width: 31.8vw;
+	display: flex;
+	justify-content: space-around;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	border-top: 0.1vw solid white;
+	border-bottom: 0.1vw solid white;
+}
+
+.menu li {
+	display: inline;
+	font-size: 0.9vw;
+	text-align: center;
+}
+
+.socialMediaBtn {
+	height: 100%;
+}
+
+.ProfessionalsBtn {
+	width: 20.6vw;
+	font-size: 0.9vw;
+	height: 100%;
 }
 
 /*______________________NAVBAR______________________*/
