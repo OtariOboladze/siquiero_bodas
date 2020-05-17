@@ -7,6 +7,10 @@ SECTIONS:
    FOOTER - footer
 */
 
+* {
+	border: 0.1px solid red;
+}
+
 /*______________________GLOBAL______________________*/
 
 @font-face {
@@ -59,13 +63,13 @@ body {
 	overflow: visible;
 }
 
-.islandNames-obliqueBanner-Languages ul {
+.islandNames {
 	margin: 0;
 	padding: 0;
 	font-family: Gotham;
 }
 
-.islandNames-obliqueBanner-Languages ul li {
+.islandNames li {
 	display: inline;
 	font-size: 0.7vw;
 	color: white;
@@ -81,8 +85,8 @@ body {
 }
 
 .LanguagesBtn {
-   width: 5vw;
-   padding: 0;
+	width: 5vw;
+	padding: 0;
 	font-size: 0.9vw;
 }
 
@@ -141,30 +145,30 @@ body {
 /*slider general styles*/
 nav {
 	margin: 10px 0;
-	position: relative;
-	left: -4%;
+	/* position: absolute; */
 }
 
 #slider-left-button {
 	position: absolute;
-	left: 4%;
-	top: 40%;
+	top: 22vw;
 	background: url(images/Cursor1.png) no-repeat;
-	padding: 40px 20px;
+	background-size: 2vw;
+	padding: 3vw 1.5vw;
 }
 
 #slider-right-button {
 	position: absolute;
-	right: -4%;
-	top: 40%;
+	top: 22vw;
+	right: 0;
 	background: url(images/Cursor2.png) no-repeat;
-	padding: 40px 20px;
+	background-size: 2vw;
+	padding: 3vw 1.5vw;
 }
 
 /*width is increased horizontally to match other items*/
 .mySlides {
 	display: none;
-	width: 108%;
+	width: 100%;
 }
 
 /*______________________MAIN______________________*/
@@ -200,9 +204,8 @@ main {
 
 .top-left-banner-text {
 	position: absolute;
-	bottom: 5%;
-	right: 5%;
-	padding: 0 20px;
+	bottom: 1vw;
+	right: 2vw;
 	font-size: 1.5vw;
 }
 
@@ -220,34 +223,19 @@ main {
 
 .top-right-banner-text {
 	position: absolute;
-	bottom: 8%;
-	right: 5%;
-	padding: 0 20px;
-	font-size: 2vw;
+	bottom: 2vw;
+	right: 1.4vw;
 }
 
 .top-right-banner-text p {
 	font-family: Trashhand;
 	margin: 0;
+	font-size: 2.3vw;
 }
 
 /*top-right-banner-text part is colord*/
 span {
 	color: #e498a7;
-}
-
-/*TEXT RESPONSIVNESS*/
-/*if viewport is less than 1200px, top-left-banner text will remain 18px, top-right-banner-text 24px,menu text under logo/ornament remains 12px*/
-@media screen and (max-width: 1200px) {
-	.top-left-banner-text {
-		font-size: 18px;
-	}
-	.top-right-banner-text {
-		font-size: 24px;
-	}
-	#menu li {
-		font-size: 12px;
-	}
 }
 
 /*BOTTOM FOUR BANNERS*/
@@ -265,7 +253,7 @@ span {
 	display: flex;
 	justify-content: flex-end;
 	margin: 10px 10px 0 0;
-   width: 50%;
+	width: 50%;
 }
 
 .bottom-third-and-fourth-banners {
@@ -276,18 +264,28 @@ span {
 
 .bottom-first-banner {
 	margin-right: 10px;
-	position: relative;
 	text-align: left;
+	position: relative;
 }
 
-.bottom-first-banner p {
+.bottom-first-banner-text {
 	position: absolute;
-	bottom: -30px;
-	left: 40%;
-	transform: translate(-50%, -50%);
+	bottom: 1vw;
+	left: 1vw;
+}
+
+.bottom-first-banner-text p {
 	font-family: BebasNeue;
-	font-size: x-large;
-	color: rgb(255, 8, 8);
+	font-size: 2.2vw;
+	color: #808080;
+	margin: 0;
+}
+
+/*fixed font size above 1600px screen, otherways it doesnot align */
+@media screen and (min-width: 1600px) {
+	.bottom-first-banner-text p {
+		font-size: 35px;
+	}
 }
 
 .bottom-second-banner {
@@ -298,11 +296,11 @@ span {
 
 .bottom-second-banner p {
 	position: absolute;
-	top: 38%;
+	top: 33%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: BebasNeue;
-	font-size: xx-large;
+	font-size: 2.5vw;
 	color: whitesmoke;
 }
 
