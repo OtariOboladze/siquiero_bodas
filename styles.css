@@ -8,7 +8,7 @@ SECTIONS:
 */
 
 * {
-	border: 0.1px solid red;
+	border: 0.1px solid rgba(255, 0, 128, 0.01);;
 }
 
 /*______________________GLOBAL______________________*/
@@ -145,15 +145,35 @@ body {
 /*slider general styles*/
 nav {
 	margin: 10px 0;
-	/* position: absolute; */
+}
+
+.mySlides {
+	float: left;
+}
+
+#decor-front {
+	width: 100%;
+   position: absolute;
+   bottom: 57%;
+   left: 0%;
+	z-index: 100;
+}
+
+#decor-back {
+	width: 110%;
+	position: absolute;
+	z-index: -100;
+	left: -5%;
 }
 
 #slider-left-button {
 	position: absolute;
-	top: 22vw;
+   top: 22vw;
+   left: 0%;
 	background: url(images/Cursor1.png) no-repeat;
 	background-size: 2vw;
-	padding: 3vw 1.5vw;
+   padding: 3vw 1.5vw;
+   z-index: 200;
 }
 
 #slider-right-button {
@@ -162,7 +182,8 @@ nav {
 	right: 0;
 	background: url(images/Cursor2.png) no-repeat;
 	background-size: 2vw;
-	padding: 3vw 1.5vw;
+   padding: 3vw 1.5vw;
+   z-index: 200;
 }
 
 /*width is increased horizontally to match other items*/
@@ -171,7 +192,7 @@ nav {
 	width: 100%;
 }
 
-/*______________________MAIN______________________*/
+/*_______________________MAIN_______________________*/
 
 main {
 	margin-bottom: 20px;
@@ -182,6 +203,7 @@ main {
 .top-two-banners {
 	display: flex;
 	justify-content: space-between;
+	padding-top: 20px;
 }
 
 .top-two-banners img {
@@ -281,10 +303,13 @@ span {
 	margin: 0;
 }
 
-/*fixed font size above 1600px screen, otherways it doesnot align */
+/*fixed font size above 1600px screen, to align with banner size */
 @media screen and (min-width: 1600px) {
 	.bottom-first-banner-text p {
 		font-size: 35px;
+	}
+	.bottom-third-banner-text p {
+		font-size: 29px;
 	}
 }
 
@@ -309,13 +334,17 @@ span {
 	text-align: left;
 }
 
+.bottom-third-banner-text {
+	position: absolute;
+	bottom: 5vw;
+	left: 7vw;
+}
+
 .bottom-third-banner p {
 	position: absolute;
-	top: 73%;
-	left: 45%;
 	transform: translate(-50%, -50%);
 	font-family: BebasNeue;
-	font-size: x-large;
+	font-size: 1.8vw;
 	color: #f6b035;
 }
 
