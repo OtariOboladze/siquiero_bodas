@@ -7,8 +7,9 @@ SECTIONS:
    FOOTER - footer
 */
 
+/*for testing purpose*/
 * {
-	border: 0.1px solid rgba(255, 0, 128, 0.01);;
+	border: 0.1px solid rgba(255, 0, 128, 0.01);
 }
 
 /*______________________GLOBAL______________________*/
@@ -90,17 +91,17 @@ body {
 	font-size: 0.9vw;
 }
 
-.websiteNameLogo,
-.websiteNameLogoOrnament {
+.websiteName-Logo,
+.websiteName-Logo-Ornament {
 	width: 31.8vw;
 	color: white;
 }
 
-.websiteNameLogo {
+.websiteName-Logo {
 	padding-top: 1.8vw;
 }
 
-.websiteNameLogoOrnament {
+.websiteName-Logo-Ornament {
 	padding-bottom: 1vw;
 }
 
@@ -149,17 +150,19 @@ nav {
 
 .mySlides {
 	float: left;
+	display: none;
+	width: 100%;
 }
 
-#decor-front {
+#slider-decor-front {
 	width: 100%;
-   position: absolute;
-   bottom: 57%;
-   left: 0%;
+	position: absolute;
+	bottom: 57%;
+	left: 0%;
 	z-index: 100;
 }
 
-#decor-back {
+#slider-decor-back {
 	width: 110%;
 	position: absolute;
 	z-index: -100;
@@ -168,12 +171,12 @@ nav {
 
 #slider-left-button {
 	position: absolute;
-   top: 22vw;
-   left: 0%;
+	top: 22vw;
+	left: 0%;
 	background: url(images/Cursor1.png) no-repeat;
 	background-size: 2vw;
-   padding: 3vw 1.5vw;
-   z-index: 200;
+	padding: 3vw 1.5vw;
+	z-index: 200;
 }
 
 #slider-right-button {
@@ -182,14 +185,8 @@ nav {
 	right: 0;
 	background: url(images/Cursor2.png) no-repeat;
 	background-size: 2vw;
-   padding: 3vw 1.5vw;
-   z-index: 200;
-}
-
-/*width is increased horizontally to match other items*/
-.mySlides {
-	display: none;
-	width: 100%;
+	padding: 3vw 1.5vw;
+	z-index: 200;
 }
 
 /*_______________________MAIN_______________________*/
@@ -303,7 +300,7 @@ span {
 	margin: 0;
 }
 
-/*fixed font size above 1600px screen, to align with banner size */
+/*fixed font size above 1600px screen to align with banner size */
 @media screen and (min-width: 1600px) {
 	.bottom-first-banner-text p {
 		font-size: 35px;
@@ -340,7 +337,7 @@ span {
 	left: 7vw;
 }
 
-.bottom-third-banner p {
+.bottom-third-banner-text p {
 	position: absolute;
 	transform: translate(-50%, -50%);
 	font-family: BebasNeue;
